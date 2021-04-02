@@ -1,0 +1,16 @@
+{
+  "name": "forge",
+  "version": "1.0.6",
+  "description": "An OpenGL interop library that can be used with ArrayFire or any other application using CUDA or OpenCL compute backend.",
+  "supports": "x64",
+  "dependencies": [
+    "boost-functional",
+    {
+      "name": "fontconfig",
+      "platform": "!windows"
+    },
+    "freeimage",
+    "freetype",
+    "glfw3"
+  ]
+}

@@ -5,20 +5,17 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO arrayfire/forge
-    REF 1a0f0cb6371a8c8053ab5eb7cbe3039c95132389 # v1.0.5
-    SHA512 8f8607421880a0f0013380eb5efb3a4f05331cd415d68c9cd84dd57eb727da1df6223fc6d65b106675d6aa09c3388359fab64443c31fadadf7641161be6b3b89
+    REF 2b0c31eb2d7560bf6125c274d29ab63a5d7ef35a # v1.0.6
+    SHA512 36d292eaba619ffc4e1c6ec9999075a6ae13feb9a35ece05a2e2a40cf47398b1f614e16f85d4dbe977b33c1ffcb18ba579624a18ee90c398a17a93647ca10878
     HEAD_REF master
-	PATCHES fix-static_build.patch
 )
 
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
-    PREFER_NINJA
     OPTIONS
         -DFG_BUILD_DOCS=OFF
         -DFG_BUILD_EXAMPLES=OFF
         -DFG_INSTALL_BIN_DIR=bin
-        -DFG_WITH_FREEIMAGE=OFF
 )
 
 vcpkg_install_cmake()
