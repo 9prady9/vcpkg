@@ -10,9 +10,14 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
+vcpkg_find_acquire_program(GIT)
+get_filename_component(GIT_EXE_PATH ${GIT} DIRECTORY)
+vcpkg_add_to_path(${GIT_EXE_PATH})
+
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     OPTIONS
+        -DGIT_EXECUTABLE=${GIT}
         -DFG_BUILD_DOCS=OFF
         -DFG_BUILD_EXAMPLES=OFF
         -DFG_INSTALL_BIN_DIR=bin
