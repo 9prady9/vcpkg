@@ -4,10 +4,10 @@ endif()
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO arrayfire/forge
-    REF 2b0c31eb2d7560bf6125c274d29ab63a5d7ef35a # v1.0.6
-    SHA512 36d292eaba619ffc4e1c6ec9999075a6ae13feb9a35ece05a2e2a40cf47398b1f614e16f85d4dbe977b33c1ffcb18ba579624a18ee90c398a17a93647ca10878
-    HEAD_REF master
+    REPO 9prady9/forge
+    REF ee6865cdb427a81e6be20042687255c8c0a04e37
+    SHA512 5085910e26403eb9ea3e8148006ba2e46569a37f8846a6c81f1224ce3827496bd04d5a82e7d2b608e72515c273efa88464c9bb39044d3d50851d527cc802a4f2
+    HEAD_REF cmake_config_fix
 )
 
 vcpkg_find_acquire_program(GIT)
